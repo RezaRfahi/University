@@ -26,7 +26,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone_number', 'position', 'level'
     ];
 
     /**
@@ -48,6 +48,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'position'=> \UserPositionEnum::class,
+        'level' => \UserLevelEnum::class
     ];
 
     /**
