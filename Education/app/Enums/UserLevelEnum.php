@@ -3,7 +3,7 @@
 enum UserLevelEnum:string
 {
     case administrator='administrator';
-    case leader='leader';
-    case coleader='coleader';
+    case controller='controller';
+    case user='user';
     case reader='reader';
 }
