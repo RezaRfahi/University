@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreClassRoomRequest;
-use App\Http\Requests\UpdateClassRoomRequest;
-use App\Models\ClassRoom;
+use App\Http\Requests\StoreClassroomRequest;
+use App\Http\Requests\UpdateClassroomRequest;
+use App\Models\Classroom;
 
-class ClassRoomController extends Controller
+class ClassroomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class ClassRoomController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreClassRoomRequest  $request
+     * @param  \App\Http\Requests\StoreClassroomRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreClassRoomRequest $request)
+    public function store(StoreClassroomRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class ClassRoomController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ClassRoom  $classRoom
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function show(ClassRoom $classRoom)
+    public function show(Classroom $classroom)
     {
         //
     }
@@ -53,10 +53,10 @@ class ClassRoomController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ClassRoom  $classRoom
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function edit(ClassRoom $classRoom)
+    public function edit(Classroom $classroom)
     {
         //
     }
@@ -64,11 +64,11 @@ class ClassRoomController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateClassRoomRequest  $request
-     * @param  \App\Models\ClassRoom  $classRoom
+     * @param  \App\Http\Requests\UpdateClassroomRequest  $request
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateClassRoomRequest $request, ClassRoom $classRoom)
+    public function update(UpdateClassroomRequest $request, Classroom $classroom)
     {
         //
     }
@@ -76,10 +76,10 @@ class ClassRoomController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ClassRoom  $classRoom
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClassRoom $classRoom)
+    public function destroy(Classroom $classroom)
     {
         //
     }
