@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name')->fulltext();
             $table->unsignedInteger('group_code');
             $table->unsignedInteger('course_code');
-            $table->foreign('classroom_id')->references('id')->on('class_rooms');
+            $table->foreign('classroom_id')->references('id')->on('classrooms');
             $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->string('teacher_name')->fulltext();
             $table->unsignedInteger('term_number');

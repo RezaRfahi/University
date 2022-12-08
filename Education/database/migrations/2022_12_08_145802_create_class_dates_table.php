@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('class_dates', function (Blueprint $table) {
-            $table->foreign('classroom_id')->references('id')->on('class_room');
+            $table->foreign('classroom_id')->references('id')->on('classrooms');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->string('course_name')->fulltext();
             $table->string('teacher_name')->fulltext();
