@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->fulltext();
             $table->string('type')->default('room');
+            $table->unsignedBigInteger('building_id');
             $table->foreign('building_id')->references('id')->on('buildings');
             $table->string('building_name')->fulltext();
             $table->unsignedInteger('classroom_number');
