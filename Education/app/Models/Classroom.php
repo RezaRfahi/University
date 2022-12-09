@@ -13,4 +13,19 @@ class Classroom extends Model
         'name', 'type', 'building_id', 'building_name', 'classroom_number'
     ];
 
+    public function building()
+    {
+        return $this->belongsTo(Building::class);
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
+
+    public function classDates()
+    {
+        return $this->hasMany(ClassDate::class);
+    }
+
 }

@@ -14,4 +14,14 @@ class ClassDate extends Model
         'date', 'time', 'status', 'circumstance'
     ];
 
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class);
+    }
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
 }

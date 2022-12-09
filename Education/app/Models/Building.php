@@ -13,4 +13,14 @@ class Building extends Model
         'name', 'user_id', 'warden_name'
         ];
 
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
+
 }

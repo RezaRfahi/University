@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\ClassDate;
 use App\Models\Classroom;
 use App\Models\Course;
 use ClassDateCircumstanceEnum as Circumstance;
@@ -14,6 +15,13 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ClassDateFactory extends Factory
 {
     /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = ClassDate::class;
+
+    /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
@@ -21,8 +29,10 @@ class ClassDateFactory extends Factory
     public function definition()
     {
         $course=Course::all()->random();
+        $classroom = Classroom::all()->random();
         return [
-            'classroom_id' => Classroom::all()->random()->id,
+            'classroom_id' => $classroom->id,
+            'classroom_name' => $classroom->name,
             'course_id' => $course->id,
             'course_name' => $course->name,
             'teacher_name' => $course->teacher->name,

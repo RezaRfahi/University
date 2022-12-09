@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Building;
+use App\Models\Classroom;
 use ClassroomTypeEnum as Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Nette\Utils\Random;
@@ -12,6 +13,13 @@ use Nette\Utils\Random;
  */
 class ClassroomFactory extends Factory
 {
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Classroom::class;
+
     /**
      * Define the model's default state.
      *

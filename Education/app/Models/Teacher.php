@@ -13,4 +13,9 @@ class Teacher extends Model
         'name', 'phone_number', 'email'
     ];
 
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
+
 }
