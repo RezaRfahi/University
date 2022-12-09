@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class LogFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::all()->random()->id,
+            'action' => $this->faker->randomElement(['login', 'logout', 'insert', 'delete', 'update']),
+            'action_on' => User::all()->random()->name,
+            'dsc' => $this->faker->sentences()
         ];
     }
 }

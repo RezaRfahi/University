@@ -2,6 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Classroom;
+use App\Models\Course;
+use ClassDateCircumstanceEnum as Circumstance;
+use ClassDateStatusEnum as Status;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +20,16 @@ class ClassDateFactory extends Factory
      */
     public function definition()
     {
+        $course=Course::all()->random();
         return [
-            //
+            'classroom_id' => Classroom::all()->random()->id,
+            'course_id' => $course->id,
+            'course_name' => $course->name,
+            'teacher_name' => $course->teacher->name,
+            'date' => $this->faker->date(),
+            'time' => $this->faker->time('H:i'),
+            'status' => $this->faker->randomElement([Status::no_run_time, Status::running, Status::finished]),
+            'circumstance' => $this->faker->randomElement([Circumstance::intuitive, Circumstance::e_learning])
         ];
     }
 }
