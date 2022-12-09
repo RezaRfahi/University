@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
             $table->string('name')->fulltext();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('warden_name')->fulltext();
             $table->timestamps();
         });
