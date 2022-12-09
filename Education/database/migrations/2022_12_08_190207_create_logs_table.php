@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('action');
             $table->string('action_on');
-            $table->string('dsc');
+            $table->string('dsc')->nullable();
             $table->timestamps();
         });
     }
