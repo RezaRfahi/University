@@ -28,12 +28,12 @@ class BuildingSeeder extends Seeder
                 'warden_name' => $warden1->name
             ],
             [
-                'name' => 'eduction',
+                'name' => 'andishe',
                 'user_id' => $warden2->id,
                 'warden_name' => $warden2->name
             ],
             [
-                'name' => 'eduction',
+                'name' => 'fiscal',
                 'user_id' => $warden3->id,
                 'warden_name' => $warden3->name
             ]
