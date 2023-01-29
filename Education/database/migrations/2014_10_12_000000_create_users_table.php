@@ -19,9 +19,6 @@ return new class extends Migration
             $table->string('email')->unique()->fulltext();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('building_id');
-            $table->foreign('building_id')->references('id')->on('buildings')
-                ->onDelete('cascade');
             $table->string('phone_number', '13')->nullable()->fulltext();
             $table->rememberToken();
 //            $table->foreignId('current_team_id')->nullable();

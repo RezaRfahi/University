@@ -25,7 +25,7 @@ class BuildingFactory extends Factory
     public function definition()
     {
         return [
-            //
+//            'name' =>
         ];
     }
 }
