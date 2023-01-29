@@ -41,7 +41,6 @@ class CourseFactory extends Factory
             'last_session' => $time,
             'start_time' => $time,
             'finish_time' => $time+$this->faker->time('H:i:s', '+3 hours'),
-
         ];
     }
 }
