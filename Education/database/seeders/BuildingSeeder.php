@@ -24,17 +24,14 @@ class BuildingSeeder extends Seeder
         DB::table('buildings')->insert([
             [
                 'name' => 'eduction',
-                'user_id' => $warden1->id,
                 'warden_name' => $warden1->name
             ],
             [
                 'name' => 'andishe',
-                'user_id' => $warden2->id,
                 'warden_name' => $warden2->name
             ],
             [
                 'name' => 'fiscal',
-                'user_id' => $warden3->id,
                 'warden_name' => $warden3->name
             ]
         ]);

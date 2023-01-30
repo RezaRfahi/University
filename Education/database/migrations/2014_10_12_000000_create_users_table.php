@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone_number', '13')->nullable()->fulltext();
             $table->rememberToken();
+            $table->unsignedBigInteger('building_id')->unique()->nullable();
+            $table->foreign('building_id')->references('id')->on('buildings')->onDelete('cascade');
 //            $table->foreignId('current_team_id')->nullable();
             $table->string('position')->default('clerk');
             $table->string('level')->default('reader');

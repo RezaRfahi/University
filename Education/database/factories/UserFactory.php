@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Building;
 use App\Models\Team;
 use App\Models\User;
 use Faker\Provider\PhoneNumber;
@@ -27,12 +28,12 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'phone_number' => PhoneNumber::numerify('###########'),
+            'building_id' => Building::all()->random()->id,
             'position' => $this->faker->randomElement([Position::assistant, Position::employee,
                 Position::impresario, Position::manager, Position::warden
             ]),
