@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\UserLevelEnum;
+use App\Enums\UserPositionEnum;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,8 +50,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'position'=> \UserPositionEnum::class,
-        'level' => \UserLevelEnum::class
+        'position'=> UserPositionEnum::class,
+        'level' => UserLevelEnum::class
     ];
 
     /**

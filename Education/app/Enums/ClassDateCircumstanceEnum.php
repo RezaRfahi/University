@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Enums;
+
 enum ClassDateCircumstanceEnum:string
 {
     case intuitive='intuitive';

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Enums;
+
 enum UserPositionEnum:string
 {
     case manager='manager';

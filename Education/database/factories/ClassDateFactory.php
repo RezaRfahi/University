@@ -5,8 +5,8 @@ namespace Database\Factories;
 use App\Models\ClassDate;
 use App\Models\Classroom;
 use App\Models\Course;
-use ClassDateCircumstanceEnum as Circumstance;
-use ClassDateStatusEnum as Status;
+use App\Enums\ClassDateCircumstanceEnum as Circumstance;
+use App\Enums\ClassDateStatusEnum as Status;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

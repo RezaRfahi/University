@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Enums\LoanStatus;
-use App\Enums\PersonPosition;
+use App\Enums\LoanStatusEnum;
+use App\Enums\PersonPositionEnum;
 use App\Models\Loan;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Psy\Util\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Loan>
@@ -27,14 +28,17 @@ class LoanFactory extends Factory
     public function definition()
     {
         return [
-            'object_name' => $this->faker->sentence(),
+            'object_name' => $this->faker->word(),
             'person_name' => $this->faker->name(),
-            'person_position' => $this->faker->randomElement([
-                PersonPosition::teacher->value, PersonPosition::employee->value, PersonPosition::student->value
-                ]),
+            'person_position' => Str($this->faker->randomElement([
+                PersonPositionEnum::teacher->value, PersonPositionEnum::employee->value,
+                PersonPositionEnum::student->value
+            ])),
             'person_identify' => $this->faker->numerify('################'),
-            'status' => $this->faker->randomElement([LoanStatus::onUsing->value, LoanStatus::repay->value]),
-            'text' => $this->faker->text()
+            'status' => Str($this->faker->randomElement(
+                [LoanStatusEnum::onUsing->value, LoanStatusEnum::repay->value]
+            )),
+            'description' => $this->faker->text(50)
         ];
     }
 }

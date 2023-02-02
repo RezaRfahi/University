@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Enums;
+
 enum ClassroomTypeEnum:string
 {
     case room='room';

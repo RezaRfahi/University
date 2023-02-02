@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('building_controls', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->unique();
+            $table->unsignedBigInteger('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('building_id')->unique();
+            $table->unsignedBigInteger('building_id')->index();
             $table->foreign('building_id')->references('id')->on('buildings')->onDelete('cascade');
             $table->timestamps();
         });

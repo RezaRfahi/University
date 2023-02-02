@@ -14,10 +14,11 @@ class BuildingControlFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    private $increament=1;
+
     public function definition()
     {
-        return [
-            //
-        ];
+        //
     }
 }

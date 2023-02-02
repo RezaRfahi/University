@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Enums;
+
 enum UserLevelEnum:string
 {
     case administrator='administrator';

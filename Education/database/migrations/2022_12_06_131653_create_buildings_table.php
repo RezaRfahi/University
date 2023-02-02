@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->fulltext();
-            $table->string('warden_name')->fulltext();
+            $table->string('name')->unique();
+            $table->string('warden_name')->unique();
             $table->timestamps();
         });
     }

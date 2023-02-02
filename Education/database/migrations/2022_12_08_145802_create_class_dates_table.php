@@ -20,11 +20,14 @@ return new class extends Migration
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->string('course_name')->fulltext();
+            $table->unsignedBigInteger('teacher_id');
+            $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->string('teacher_name')->fulltext();
             $table->date('date');
             $table->time('time');
             $table->string('status')->default('no_run_time');
             $table->string('circumstance')->default('intuitive');
+            $table->unique(['classroom_id', 'date', 'time']);
             $table->timestamps();
         });
     }

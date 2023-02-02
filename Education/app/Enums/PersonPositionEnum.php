@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum PersonPosition:string
+enum PersonPositionEnum:string
 {
     case employee = 'employee';
     case teacher = 'teacher';

@@ -2,15 +2,14 @@
 
 namespace Database\Factories;
 
-use App\Models\Building;
 use App\Models\Team;
 use App\Models\User;
 use Faker\Provider\PhoneNumber;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Enums\UserPositionEnum as Position;
 use Laravel\Jetstream\Features;
-use UserPositionEnum as Position;
-use UserLevelEnum as Level;
+use App\Enums\UserLevelEnum as Level;
 
 class UserFactory extends Factory
 {
@@ -33,12 +32,14 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'phone_number' => PhoneNumber::numerify('###########'),
-            'building_id' => Building::all()->random()->id,
-            'position' => $this->faker->randomElement([Position::assistant, Position::employee,
-                Position::impresario, Position::manager, Position::warden
+            'position' => $this->faker->randomElement([
+                Position::assistant->value, Position::employee->value,
+                Position::impresario->value, Position::manager->value,
+                Position::warden->value
             ]),
-            'level' => $this->faker->randomElement([Level::administrator, Level::user,
-                Level::controller, Level::reader
+            'level' => $this->faker->randomElement([
+                Level::administrator->value, Level::user->value,
+                Level::controller->value, Level::reader->value
                 ]),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),

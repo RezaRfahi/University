@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum LoanStatus:string
+enum LoanStatusEnum:string
 {
     case onUsing = 'onUsing';
     case repay = 'repay';

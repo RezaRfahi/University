@@ -16,24 +16,11 @@ class BuildingSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        $warden1=User::all()->random();
-        $warden2=User::all()->random();
-        $warden3=User::all()->random();
-
+    {;
         DB::table('buildings')->insert([
-            [
-                'name' => 'eduction',
-                'warden_name' => $warden1->name
-            ],
-            [
-                'name' => 'andishe',
-                'warden_name' => $warden2->name
-            ],
-            [
-                'name' => 'fiscal',
-                'warden_name' => $warden3->name
-            ]
+            [ 'name' => 'eduction', 'warden_name' => User::all()->random()->name.'1' ],
+            [ 'name' => 'andishe', 'warden_name' => User::all()->random()->name.'2' ],
+            [ 'name' => 'fiscal', 'warden_name' => User::all()->random()->name.'3' ]
         ]);
     }
 }

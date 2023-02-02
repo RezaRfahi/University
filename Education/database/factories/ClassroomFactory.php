@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Building;
 use App\Models\Classroom;
-use ClassroomTypeEnum as Type;
+use App\Enums\ClassroomTypeEnum as Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Nette\Utils\Random;
 

@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Log;
 use App\Models\User;
+use App\Enums\LogActionEnum as Action;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -27,9 +28,12 @@ class LogFactory extends Factory
     {
         return [
             'user_id' => User::all()->random()->id,
-            'action' => $this->faker->randomElement(['login', 'logout', 'insert', 'delete', 'update']),
+            'action' => $this->faker->randomElement([
+                Action::insert->value, Action::login->value, Action::update->value,
+                Action::delete->value, Action::logout->value
+            ]),
             'action_on' => User::all()->random()->name,
-            'dsc' => $this->faker->sentences()
+            'dsc' => $this->faker->text(35)
         ];
     }
 }
