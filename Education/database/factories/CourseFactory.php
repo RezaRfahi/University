@@ -38,9 +38,9 @@ class CourseFactory extends Factory
             'term_number' => rand(1,10),
             'units' => rand(1,4),
             'first_session' => $this->faker->date(),
-            'last_session' => $time,
+            'last_session' => $this->faker->date('Y-m-d', '+3 months'),
             'start_time' => $time,
-            'finish_time' => $time+$this->faker->time('H:i:s', '+3 hours'),
+            'finish_time' => $this->faker->time('H:i', '+5 hours'),
         ];
     }
 }

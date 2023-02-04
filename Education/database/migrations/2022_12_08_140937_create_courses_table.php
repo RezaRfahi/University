@@ -27,8 +27,8 @@ return new class extends Migration
             $table->unsignedInteger('units');
             $table->date('first_session');
             $table->date('last_session');
-            $table->time('start_time');
-            $table->time('finish_time');
+            $table->timestamp('start_time');
+            $table->timestamp('finish_time');
             $table->timestamps();
         });
     }
