@@ -24,10 +24,11 @@ return new class extends Migration
             $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->string('teacher_name')->fulltext();
             $table->date('date');
-            $table->time('time');
+            $table->time('start_time');
+            $table->time('finish_time');
             $table->string('status')->default('no_run_time');
             $table->string('circumstance')->default('intuitive');
-            $table->unique(['classroom_id', 'date', 'time']);
+            $table->unique(['classroom_id', 'date', 'start_time']);
             $table->timestamps();
         });
     }

@@ -27,7 +27,8 @@ class CourseFactory extends Factory
     public function definition()
     {
         $teacher=Teacher::all()->random();
-        $time=$this->faker->time('H:i');
+        $time=$this->faker->time('H:i:00');
+//        dd($time);
         return [
             'name' => $this->faker->streetName(),
             'group_code' => $this->faker->randomDigitNotZero(),
