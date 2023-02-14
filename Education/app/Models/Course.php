@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Course extends Model
 {
@@ -15,17 +17,17 @@ class Course extends Model
         'start_time', 'finish_time'
     ];
 
-    public function classroom()
+    public function classroom() : BelongsTo
     {
         return $this->belongsTo(Classroom::class);
     }
 
-    public function classDates()
+    public function classDates() : HasMany
     {
         return $this->hasMany(ClassDate::class);
     }
 
-    public function teacher()
+    public function teacher() : BelongsTo
     {
         return $this->belongsTo(Teacher::class);
     }

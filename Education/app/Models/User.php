@@ -6,6 +6,9 @@ use App\Enums\UserLevelEnum;
 use App\Enums\UserPositionEnum;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -63,14 +66,19 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function logs()
+    public function logs() : HasMany
     {
         return $this->hasMany(Log::class);
     }
 
-    public function building()
+    public function building(): BelongsTo
     {
         return $this->belongsTo(Building::class);
+    }
+
+    public function permissions() : BelongsToMany
+    {
+        return $this->belongsToMany(Permission::class);
     }
 
 }

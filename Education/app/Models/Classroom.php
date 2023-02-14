@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Classroom extends Model
 {
@@ -18,12 +19,12 @@ class Classroom extends Model
         return $this->belongsTo(Building::class);
     }
 
-    public function courses()
+    public function courses() : HasMany
     {
         return $this->hasMany(Course::class);
     }
 
-    public function classDates()
+    public function classDates() : HasMany
     {
         return $this->hasMany(ClassDate::class);
     }
