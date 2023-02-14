@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\BuildingControl;
+use App\Models\Permission;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
             CourseSeeder::class,
             ClassDateSeeder::class,
             BuildingControlSeeder::class,
+            PermissionSeeder::class,
             LoanSeeder::class,
             LogSeeder::class
         ]);
