@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'superAdmin',
-            'email' => 'admin@gamil.com',
+            'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin1234'),
             'remember_token' => Str::random(),
