@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\PanelController;
+use \App\Http\Livewire\Panel\Index as PanelIndex;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +26,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::prefix('panel')->group(callback: function (){
+        Route::get('/', PanelIndex::class)->name('panel.index');
+    });
 });
