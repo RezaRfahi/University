@@ -30,14 +30,14 @@ class LoanFactory extends Factory
         return [
             'object_name' => $this->faker->word(),
             'person_name' => $this->faker->name(),
-            'person_position' => Str($this->faker->randomElement([
+            'person_position' => $this->faker->randomElement([
                 PersonPositionEnum::teacher->value, PersonPositionEnum::employee->value,
                 PersonPositionEnum::student->value
-            ])),
+            ]),
             'person_identify' => $this->faker->numerify('################'),
-            'status' => Str($this->faker->randomElement(
+            'status' => $this->faker->randomElement(
                 [LoanStatusEnum::onUsing->value, LoanStatusEnum::repay->value]
-            )),
+            ),
             'description' => $this->faker->text(50)
         ];
     }
