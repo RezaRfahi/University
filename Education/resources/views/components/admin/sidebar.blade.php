@@ -33,7 +33,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <x-admin.sidebar-item href="" :active="request()->routeIs('admin.users')">
+                            <x-admin.sidebar-item href="{{ route('panel.users') }}" :active="request()->routeIs('panel.users')">
                                 <i class="nav-icon fa fa-user"></i>
                                 <p>
                                     کاربران

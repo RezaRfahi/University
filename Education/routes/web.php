@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PanelController;
 use \App\Http\Livewire\Panel\Index as PanelIndex;
+use App\Http\Livewire\Panel\Users as PanelUsers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,5 +29,6 @@ Route::middleware([
     })->name('dashboard');
     Route::prefix('panel')->group(callback: function (){
         Route::get('/', PanelIndex::class)->name('panel.index');
+        Route::get('/users', PanelUsers::class)->name('panel.users');
     });
 });
