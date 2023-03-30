@@ -31,7 +31,20 @@
         'resources/js/jquey/jquery.js',
         'resources/js/jquey/jquery.min.js',
    ])
+    <style>
+        th, td {
+            text-align: center;
+        }
+        .profile-img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        input::placeholder {
+            text-align: center;
+        }
 
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
 
