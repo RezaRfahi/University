@@ -4,6 +4,9 @@
 
 <!-- Main row -->
     <div class="container">
+        <div class="col-sm-12 mb-2">
+            <button class="btn btn-info " target="__blank">افزودن کاربر</button>
+        </div>
         <div class="row">
             <div class="col-md-8 mb-3">
                 <input type="text" class="form-control" id="search" placeholder="جستجو...">
@@ -19,11 +22,12 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th></th>
+                <th>پروفایل</th>
                 <th>نام</th>
                 <th>ایمیل</th>
                 <th>شماره تلفن</th>
                 <th>سمت</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -33,9 +37,12 @@
                 <td>Fruit</td>
                 <td>$1.99</td>
                 <td>admin</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm">حذف</button>
+                    <button type="button" class="btn btn-secondary btn-sm">ویرایش</button>
+                </td>
             </tr>
             </tbody>
         </table>
     </div>
-
 <!-- /.row (main row) -->
