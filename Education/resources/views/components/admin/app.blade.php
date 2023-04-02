@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>پنل</title>
 
-    @livewireStyles
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {{--    <x-livewire-alert::scripts />--}}
 {{--    <x-livewire-alert::flash />--}}
@@ -31,6 +30,8 @@
         'resources/js/jquey/jquery.js',
         'resources/js/jquey/jquery.min.js',
    ])
+    @livewireStyles
+
     <style>
         th, td {
             text-align: center;
@@ -43,7 +44,6 @@
         input::placeholder {
             text-align: center;
         }
-
     </style>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -100,6 +100,7 @@
 <!-- ./wrapper -->
 
 
+@livewireScripts
 
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -109,8 +110,6 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-
-@livewireScripts
 
 </body>
 </html>

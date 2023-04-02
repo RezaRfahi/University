@@ -19,6 +19,7 @@
                 </select>
             </div>
         </div>
+        <div wire:loading.remove>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -31,7 +32,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($users as $user)
+            @forelse($users as $user)
             <tr>
                 <td><img src="{{ $user->profile_photo_url }}" alt="profile image" class="profile-img"></td>
                 <td>{{$user->name}}</td>
@@ -43,11 +44,19 @@
                     <button type="button" class="btn btn-secondary btn-sm">ویرایش</button>
                 </td>
             </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td> هیچ موردی یافت نشد</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
+        </div>
 {{--        <div class="d-flex">--}}
 {{--            {!! $users->links() !!}--}}
 {{--        </div>--}}
+        <div class="center" wire:loading>
+            Loading...
+        </div>
     </div>
 <!-- /.row (main row) -->
