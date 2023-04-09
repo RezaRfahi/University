@@ -12,11 +12,17 @@ class Users extends Component
 
     public $search='';
 
+    protected $queryString =['search' => ['except' => '']];
+
     protected $paginationTheme = 'bootstrap';
 
     public function render()
     {
-        $users=User::all();
+        $users=User::query()->when($this->search!='', function ($query)
+        {
+            $query->where('name', 'like', '%'.$this->search.'%')
+                ->orWhere('email', 'like', '%'.$this->search.'%');
+        })->paginate(5);
         return view('livewire.panel.users', compact('users'))->layout('components.admin.app');
     }
 }

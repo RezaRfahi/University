@@ -1,3 +1,4 @@
+<div>
 <x-slot name="title">
     <h1 class="m-0 text-dark">کاربران</h1>
 </x-slot>
@@ -9,7 +10,8 @@
         </div>
         <div class="row">
             <div class="col-md-8 mb-3">
-                <input type="text" class="form-control" id="search" placeholder="جستجو...">
+                <input wire:model.debounce.500ms="search" name="search"  type="text" class="form-control" id="search"
+                       placeholder="جستجو..." value="{{old('search')}}">
             </div>
             <div class="col-md-4 mb-3">
                 <select class="form-control" id="filter-category">
@@ -19,7 +21,7 @@
                 </select>
             </div>
         </div>
-        <div wire:loading.remove>
+        <div>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -51,12 +53,14 @@
             @endforelse
             </tbody>
         </table>
+            <div class="align-content-center" wire:loading>
+                <h3>Loading...</h3>
+            </div>
         </div>
-{{--        <div class="d-flex">--}}
-{{--            {!! $users->links() !!}--}}
-{{--        </div>--}}
-        <div class="align-content-center" wire:loading>
-            <h3>Loading...</h3>
+        <div class="d-flex">
+            {!! $users->links() !!}
         </div>
+
     </div>
 <!-- /.row (main row) -->
+</div>
