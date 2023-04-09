@@ -11,6 +11,7 @@ class Users extends Component
     use WithPagination;
 
     public $search='';
+
     protected $paginationTheme = 'bootstrap';
 
     public function render()

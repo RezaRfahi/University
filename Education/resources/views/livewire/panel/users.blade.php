@@ -55,8 +55,8 @@
 {{--        <div class="d-flex">--}}
 {{--            {!! $users->links() !!}--}}
 {{--        </div>--}}
-        <div class="center" wire:loading>
-            Loading...
+        <div class="align-content-center" wire:loading>
+            <h3>Loading...</h3>
         </div>
     </div>
 <!-- /.row (main row) -->
