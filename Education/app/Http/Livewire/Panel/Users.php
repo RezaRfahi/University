@@ -10,7 +10,9 @@ class Users extends Component
 {
     use WithPagination;
 
-    public $search='';
+    public $search = '';
+
+    public $sort = '';
 
     protected $queryString =['search' => ['except' => '']];
 
@@ -18,7 +20,7 @@ class Users extends Component
 
     public function render()
     {
-        $users=User::query()->when($this->search!='', function ($query)
+        $users=User::query()->when($this->search != '', function ($query)
         {
             $query->where('name', 'like', '%'.$this->search.'%')
                 ->orWhere('email', 'like', '%'.$this->search.'%');
