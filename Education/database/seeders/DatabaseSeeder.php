@@ -17,15 +17,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-//            UserSeeder::class,
-//            BuildingSeeder::class,
-//            TeacherSeeder::class,
-//            ClassroomSeeder::class,
-//            CourseSeeder::class,
-//            ClassDateSeeder::class,
-//            BuildingControlSeeder::class,
-//            PermissionSeeder::class,
-//            PermissionUserSeeder::class,
+            UserSeeder::class,
+            BuildingSeeder::class,
+            TeacherSeeder::class,
+            ClassroomSeeder::class,
+            CourseSeeder::class,
+            ClassDateSeeder::class,
+            BuildingControlSeeder::class,
+            PermissionSeeder::class,
+            PermissionUserSeeder::class,
             LoanSeeder::class,
             LogSeeder::class,
         ]);

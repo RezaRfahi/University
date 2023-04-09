@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->nullOnDelete();
+            $table->string('user_name');
             $table->string('action');
-            $table->string('action_on');
+            $table->string('action_on')->nullable();
             $table->string('dsc')->nullable();
             $table->timestamps();
         });

@@ -18,6 +18,12 @@ class Users extends Component
 
     protected $paginationTheme = 'bootstrap';
 
+    public function deleteUser($id)
+    {
+        User::find($id)->delete();
+        $this->reset();
+    }
+
     public function render()
     {
         $users=User::query()->when($this->search != '', function ($query)

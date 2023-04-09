@@ -43,7 +43,7 @@
                 <td>{{$user->phone_number}}</td>
                 <td>{{$user->position}}</td>
                 <td>
-                    <button type="button" class="btn btn-danger btn-sm">حذف</button>
+                    <button wire:click="deleteUser({{ $user->id }})" type="button" class="btn btn-danger btn-sm">حذف</button>
                     <button type="button" class="btn btn-secondary btn-sm">ویرایش</button>
                 </td>
             </tr>

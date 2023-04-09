@@ -26,8 +26,10 @@ class LogFactory extends Factory
      */
     public function definition()
     {
+        $user = User::all()->random();
         return [
-            'user_id' => User::all()->random()->id,
+            'user_id' => $user->id,
+            'user_name' => $user->name,
             'action' => $this->faker->randomElement([
                 Action::insert->value, Action::login->value, Action::update->value,
                 Action::delete->value, Action::logout->value
