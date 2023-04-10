@@ -15,12 +15,12 @@
                        placeholder="جستجو..." value="{{old('search')}}">
             </div>
 
-{{--            <div class="col-md-4 mb-3">--}}
-{{--                <select wire.model.debounce.500ms="" class="form-control" id="filter-category">--}}
-{{--                    <option value="">بالا به پایین</option>--}}
-{{--                    <option value=""></option>--}}
-{{--                </select>--}}
-{{--            </div>--}}
+            <div class="col-md-4 mb-3">
+                <select wire:model="order" class="form-control" id="filter-category">
+                    <option value="asc">صعودی</option>
+                    <option value="desc">نزولی</option>
+                </select>
+            </div>
         </div>
         <div>
         <table class="table table-bordered">

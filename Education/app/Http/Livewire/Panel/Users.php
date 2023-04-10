@@ -12,7 +12,7 @@ class Users extends Component
 
     public $search = '';
 
-    public $sort = '';
+    public $order = 'asc';
 
     protected $queryString =['search' => ['except' => '']];
 
@@ -30,7 +30,7 @@ class Users extends Component
         {
             $query->where('name', 'like', '%'.$this->search.'%')
                 ->orWhere('email', 'like', '%'.$this->search.'%');
-        })->paginate(5);
+        })->orderBy('name', $this->order)->paginate(5);
         return view('livewire.panel.users', compact('users'))->layout('components.admin.app');
     }
 }
