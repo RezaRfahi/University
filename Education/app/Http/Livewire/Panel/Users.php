@@ -14,6 +14,8 @@ class Users extends Component
 
     public $order = 'asc';
 
+    public $positionFilter = '';
+
     protected $queryString =['search' => ['except' => '']];
 
     protected $paginationTheme = 'bootstrap';
@@ -30,6 +32,9 @@ class Users extends Component
         {
             $query->where('name', 'like', '%'.$this->search.'%')
                 ->orWhere('email', 'like', '%'.$this->search.'%');
+        })->when($this->positionFilter != '', function ($query)
+        {
+            $query->where('position', '=', $this->positionFilter);
         })->orderBy('name', $this->order)->paginate(5);
         return view('livewire.panel.users', compact('users'))->layout('components.admin.app');
     }

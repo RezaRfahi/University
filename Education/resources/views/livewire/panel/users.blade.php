@@ -10,12 +10,22 @@
                 <button class="btn btn-info " target="__blank">افزودن کاربر</button>
             </div>
 
-            <div class="col-md-8 mb-3">
+            <div class="col-md-6 mb-3">
                 <input wire:model.debounce.500ms="search" name="search"  type="text" class="form-control" id="search"
                        placeholder="جستجو..." value="{{old('search')}}">
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
+                <select wire:model="positionFilter" class="form-control" id="filter-category">
+                    <option value="">همه سمت ها</option>
+                    <option value="manager">مدیر</option>
+                    <option value="assistant">معاون</option>
+                    <option value="warden">سرپرست</option>
+                    <option value="impresario">منشی</option>
+                    <option value="employee">کارمند</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
                 <select wire:model="order" class="form-control" id="filter-category">
                     <option value="asc">صعودی</option>
                     <option value="desc">نزولی</option>
