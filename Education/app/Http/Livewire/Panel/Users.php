@@ -14,6 +14,7 @@ class Users extends Component
 
     public $order = 'asc';
 
+    public $orderBy = 'id';
     public $positionFilter = '';
 
     protected $queryString =['search' => ['except' => '']];
@@ -35,7 +36,7 @@ class Users extends Component
         })->when($this->positionFilter != '', function ($query)
         {
             $query->where('position', '=', $this->positionFilter);
-        })->orderBy('name', $this->order)->paginate(5);
+        })->orderBy($this->orderBy, $this->order)->paginate(5);
         return view('livewire.panel.users', compact('users'))->layout('components.admin.app');
     }
 }

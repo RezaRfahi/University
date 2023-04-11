@@ -15,7 +15,7 @@
                        placeholder="جستجو..." value="{{old('search')}}">
             </div>
 
-            <div class="col-md-3 mb-3">
+            <div class="col-md-2 mb-3">
                 <select wire:model="positionFilter" class="form-control" id="filter-category">
                     <option value="">همه سمت ها</option>
                     <option value="manager">مدیر</option>
@@ -25,7 +25,15 @@
                     <option value="employee">کارمند</option>
                 </select>
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-2 mb-3">
+                <select wire:model="orderBy" class="form-control" id="filter-category">
+                    <option value="id">مرتب بر اساس تاریخ</option>
+                    <option value="name">مرتب بر اساس نام</option>
+                    <option value="email">مرتب بر اساس ایمیل</option>
+                    <option value="position">مرتب بر اساس سمت</option>
+                </select>
+            </div>
+            <div class="col-md-2 mb-3">
                 <select wire:model="order" class="form-control" id="filter-category">
                     <option value="asc">صعودی</option>
                     <option value="desc">نزولی</option>
