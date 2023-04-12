@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 mb-2">
-                <button class="btn btn-info " target="__blank">افزودن کاربر</button>
+                <button wire:click="redirectToCreateUser" class="btn btn-info " target="__blank">افزودن کاربر</button>
             </div>
 
             <div class="col-md-6 mb-3">

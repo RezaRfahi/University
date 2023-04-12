@@ -27,6 +27,11 @@ class Users extends Component
         $this->reset();
     }
 
+    public function redirectToCreateUser()
+    {
+        return redirect()->route('panel.user.create');
+    }
+
     public function render()
     {
         $users=User::query()->when($this->search != '', function ($query)
