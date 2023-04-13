@@ -3,7 +3,7 @@
     <h1 class="m-0 text-dark">کاربران</h1>
 </x-slot>
 
-<!-- Main row -->
+    <!-- Main row -->
     <div class="container">
         <div class="row">
             <div class="col-sm-12 mb-2">

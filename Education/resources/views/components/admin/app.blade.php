@@ -59,25 +59,30 @@
 
 
 
+
     <!-- Content Wrapper. Contains page content -->
     <section class="content">
         <div class="content-wrapper">
             <div class="container-fluid">
                 <div class="content-header">
                     <div class="container-fluid">
+
+                        <!-- Show Alert Section -->
+                        <div>
+                            @if (session()->has('alert.message'))
+                                <div class="alert alert-{{ session('alert.type') }} alert-dismissible fade show" role="alert">
+                                    {{ session('alert.message') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            @endif
+                        </div>
+
                         <div class="row mb-2">
                             <div class="col-sm-6">
                                 {{ $title }}
                             </div><!-- /.col -->
                         </div><!-- /.row -->
                     </div><!-- /.container-fluid -->
-                </div>
-                <div>
-                    @if (session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session('message') }}
-                        </div>
-                    @endif
                 </div>
                 <main>
                     {{ $slot }}

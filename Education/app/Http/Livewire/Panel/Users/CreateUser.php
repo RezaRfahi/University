@@ -39,7 +39,7 @@ class CreateUser extends Component
 
         // Save the user to the database
 
-        session()->flash('success', 'User created successfully.');
+        session()->flash('alert.message', 'کاربر با موفقیت ایجاد شد');
 
         return redirect()->route('panel.users');
     }
