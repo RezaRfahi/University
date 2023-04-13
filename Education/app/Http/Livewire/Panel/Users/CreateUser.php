@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Panel\Users;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -13,7 +15,7 @@ class CreateUser extends Component
     public $name;
     public $email;
     public $password;
-    public $profile_photo_path;
+    public $profile_photo;
     public $level;
     public $position;
     public $phone_number;
@@ -22,7 +24,6 @@ class CreateUser extends Component
         'name' => 'required|min:3|max:255',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:8',
-        'profile_photo_path' => 'nullable|image|mimes:jpeg,png|max:2048',
         'level' => 'required|in:administrator,controller,user,reader',
         'position' => 'required|in:manager,assistant,warden,impresario,employee',
         'phone_number' => 'nullable|numeric|digits:11',
@@ -35,10 +36,10 @@ class CreateUser extends Component
 
     public function save()
     {
-        $this->validate();
-
-        // Save the user to the database
-
+        $valid_data = $this->validate();
+        $valid_data['password'] = bcrypt($valid_data['password']);
+        $valid_data['remember_token'] = Str::random(12);
+        User::create($valid_data);
         session()->flash('alert.message', 'کاربر با موفقیت ایجاد شد');
 
         return redirect()->route('panel.users');

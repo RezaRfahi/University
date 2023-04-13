@@ -5,29 +5,24 @@
     <div class="container">
         <form wire:submit.prevent="save">
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">نام :</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" wire:model="name">
                 @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">ایمیل :</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" wire:model="email">
                 @error('email') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
+                <label for="password">رمز عبور :</label>
                 <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" wire:model="password">
                 @error('password') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="profile_photo_path">Profile Photo Path:</label>
-                <input type="file" class="form-control @error('profile_photo_path') is-invalid @enderror" id="profile_photo_path" wire:model="profile_photo_path">
-                @error('profile_photo_path') <span class="invalid-feedback">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
-                <label for="level">Level:</label>
+                <label for="level">سطح :</label>
                 <select class="form-control @error('level') is-invalid @enderror" id="level" wire:model="level">
-                    <option value="">-- Select level --</option>
+                    <option value="">-- انتخاب سطح --</option>
                     <option value="administrator">ادمین</option>
                     <option value="controller">ناظر</option>
                     <option value="user">کاربر</option>
@@ -36,7 +31,7 @@
                 @error('level') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="position">Position:</label>
+                <label for="position">سمت:</label>
                 <select class="form-control @error('position') is-invalid @enderror" id="position" wire:model="position">
                     <option value="">-- Select position --</option>
                     <option value="manager">مدیر</option>
@@ -48,7 +43,7 @@
                 @error('position') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="phone_number">Phone Number:</label>
+                <label for="phone_number">شماره موبایل :</label>
                 <input type="tel" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number" wire:model="phone_number">
                 @error('phone_number') <span class="invalid-feedback">{{ $message }}</span> @enderror
             </div>
