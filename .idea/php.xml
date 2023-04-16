@@ -17,7 +17,6 @@
       <path value="$PROJECT_DIR$/Education/vendor/spatie/laravel-ignition" />
       <path value="$PROJECT_DIR$/Education/vendor/spatie/flare-client-php" />
       <path value="$PROJECT_DIR$/Education/vendor/spatie/ignition" />
-      <path value="$PROJECT_DIR$/Education/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/Education/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/Education/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/deprecation-contracts" />
@@ -28,7 +27,6 @@
       <path value="$PROJECT_DIR$/Education/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/Education/vendor/symfony/polyfill-php81" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/Education/vendor/symfony/error-handler" />
@@ -102,7 +100,6 @@
       <path value="$PROJECT_DIR$/Education/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/Education/vendor/nette/utils" />
       <path value="$PROJECT_DIR$/Education/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/Education/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/Education/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/Education/vendor/laravel/fortify" />
       <path value="$PROJECT_DIR$/Education/vendor/laravel/jetstream" />
@@ -132,6 +129,14 @@
       <path value="$PROJECT_DIR$/Education/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/Education/vendor/paragonie/constant_time_encoding" />
       <path value="$PROJECT_DIR$/Education/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/Education/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/Education/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Education/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/Education/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Education/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Education/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Education/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/Education/vendor/okipa/laravel-table" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

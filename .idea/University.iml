@@ -13,7 +13,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/spatie/laravel-ignition" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/spatie/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/spatie/ignition" />
-      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/deprecation-contracts" />
@@ -24,7 +23,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/polyfill-php80" />
-      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/polyfill-php81" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/uid" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/error-handler" />
@@ -98,7 +96,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/sebastian/environment" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/nette/utils" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/sebastian/code-unit" />
-      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/laravel/fortify" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/laravel/jetstream" />
@@ -128,6 +125,14 @@
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/paragonie/constant_time_encoding" />
       <excludeFolder url="file://$MODULE_DIR$/Education/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/Education/vendor/okipa/laravel-table" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
