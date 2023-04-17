@@ -49,8 +49,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'position'=> UserPositionEnum::class,
-        'level' => UserLevelEnum::class
     ];
 
     /**

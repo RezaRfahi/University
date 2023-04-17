@@ -26,7 +26,7 @@
                         <li class="nav-item has-treeview menu-open">
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <x-admin.sidebar-item href="" :active="request()->routeIs('admin.dashboard')">
+                                    <x-admin.sidebar-item href="{{ route('panel.index') }}" :active="request()->routeIs('panel.index')">
                                         <i class="fa fa-circle-o nav-icon"></i>
                                         <p>داشبورد</p>
                                     </x-admin.sidebar-item>
