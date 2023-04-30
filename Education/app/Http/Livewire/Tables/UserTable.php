@@ -5,6 +5,8 @@ namespace App\Http\Livewire\Tables;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\User;
+use Morilog\Jalali\Jalalian;
+use Rappasoft\LaravelLivewireTables\Views\Columns\ImageColumn;
 
 class UserTable extends DataTableComponent
 {
@@ -18,20 +20,40 @@ class UserTable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make("Id", "id")
-                ->sortable(),
-            Column::make("Name", "name")
-                ->sortable(),
-            Column::make("Email", "email")
-                ->sortable(),
-            Column::make("Position", "position")
-                ->sortable(),
-            Column::make("Level", "level")
-                ->sortable(),
-            Column::make("Created at", "created_at")
-                ->sortable(),
-            Column::make("Updated at", "updated_at")
-                ->sortable(),
+            ImageColumn::make('پروفایل')->location(
+                fn($row) => $row->getProfilePhotoUrlAttribute())
+                ->attributes(fn($row) => [
+                    'class' => 'rounded-full',
+                    'alt' => 'none',
+                ]),
+                Column::make("نام", "name")
+                ->sortable()->searchable(),
+            Column::make("ایمیل", "email")
+                ->sortable()->searchable(),
+            Column::make("سمت", "position")->format(
+                fn($v) => match($v) {
+                    'manager' => 'مدیریت',
+                    'assistant' => 'معاون',
+                    'warden' => 'سرپرست',
+                    'impresario' => 'مدیر ساختمان',
+                    'employee' => 'کارمند',
+                }),
+            Column::make("سطح", "level")
+                ->format(
+                    fn($v) => match($v) {
+                        'administrator' => 'مدیر',
+                        'controller' => 'کنترل کننده',
+                        'user' => 'کاربرعادی',
+                        'reader' => 'ناظر',
+                    }),
+            Column::make("ثبت", "created_at")
+                ->sortable()->format(function ($value, $row) {
+                    return Jalalian::fromDateTime($value)->format('Y/m/d H:i:s'); // Convert the DateTime object to a Jalali date string
+                }),
+            Column::make("آخرین تغییرات", "updated_at")
+                ->sortable()->format(function ($value, $row) {
+                    return Jalalian::fromDateTime($value)->format('Y/m/d H:i:s'); // Convert the DateTime object to a Jalali date string
+                }),
         ];
     }
 }
