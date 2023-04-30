@@ -79,7 +79,7 @@
 {{--        <div class="d-flex">--}}
 {{--            {!! $users->links() !!}--}}
 {{--        </div>--}}
-
+            <livewire:tables.user-table/>
     </div>
 <!-- /.row (main row) -->
 </div>
