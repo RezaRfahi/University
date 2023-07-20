@@ -5,10 +5,10 @@
 
     <!-- Main row -->
     <div class="container">
-{{--        <div class="row">--}}
-{{--            <div class="col-sm-12 mb-2">--}}
-{{--                <button wire:click="redirectToCreateUser" class="btn btn-info " target="__blank">افزودن کاربر</button>--}}
-{{--            </div>--}}
+        <div class="row">
+            <div class="col-sm-12 mb-2">
+                <button wire:click="redirectToCreateUser" class="btn btn-info " target="__blank">افزودن کاربر</button>
+            </div>
 
 {{--            <div class="col-md-6 mb-3">--}}
 {{--                <input wire:model.debounce.500ms="search" name="search"  type="text" class="form-control" id="search"--}}
@@ -78,8 +78,8 @@
 {{--        </div>--}}
 {{--        <div class="d-flex">--}}
 {{--            {!! $users->links() !!}--}}
-{{--        </div>--}}
             <livewire:tables.user-table/>
+        </div>
     </div>
 <!-- /.row (main row) -->
 </div>

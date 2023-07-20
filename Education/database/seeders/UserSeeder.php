@@ -17,15 +17,15 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-//        User::create([
-//            'name' => 'superAdmin',
-//            'email' => 'admin@gmail.com',
-//            'email_verified_at' => now(),
-//            'password' => Hash::make('admin1234'),
-//            'remember_token' => Str::random(),
-//            'position' => 'employee',
-//            'level' => 'administrator'
-//        ]);
+        User::create([
+            'name' => 'superAdmin',
+            'email' => 'admin@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('admin1234'),
+            'remember_token' => Str::random(),
+            'position' => 'employee',
+            'level' => 'administrator'
+        ]);
         User::factory()->count(6)->create();
     }
 }

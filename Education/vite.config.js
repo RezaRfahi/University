@@ -8,10 +8,6 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/scss/app.scss',
-                'resources/css/adminlte.css',
-                'resources/css/adminlte.min.css',
-                'resources/css/bootstrap-rtl.min.css',
-                'resources/css/custom-style.css',
             ],
             refresh: [
                 ...refreshPaths,
